@@ -6,12 +6,12 @@ Simple Date selector for iOS apps
 ---
 ### Install
 **CocoaPods**
-```Swift
+```ruby
 pod 'CalendarFoundation'
 ```
 ---
 ### Usage
-```Ruby
+```swift
 import CalendarFoundation
     
 // Initialize new instance of controller with `dateSelectedBlock`
