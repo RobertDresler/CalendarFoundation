@@ -6,26 +6,26 @@ Simple Date selector for iOS apps
 ---
 ### Install
 **CocoaPods**
-
-    pod 'CalendarFoundation'
-    
+```Swift
+pod 'CalendarFoundation'
+```
 ---
 ### Usage
-
-    import CalendarFoundation
+```Ruby
+import CalendarFoundation
     
-    // Initialize new instance of controller with `dateSelectedBlock`
-    let calendarVC = CalendarViewController(dateSelectedBlock: { [weak self] date in
-        if let date = date {
-            // work with received `Date`
-        } else {
-            // user selected option "Remove date"
-        }
-    })
+// Initialize new instance of controller with `dateSelectedBlock`
+let calendarVC = CalendarViewController(dateSelectedBlock: { [weak self] date in
+    if let date = date {
+        // work with received `Date`
+    } else {
+        // user selected option "Remove date" = `date` is `nil`
+    }
+})
     
     // From you `UIViewController` present it
     present(calendarVC, animated: true)
-
+```
 ---
 
 ### Preview
