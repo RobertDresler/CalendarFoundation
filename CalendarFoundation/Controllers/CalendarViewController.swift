@@ -10,14 +10,8 @@ import UIKit
 
 public class CalendarViewController: UIViewController {
     
-    class func instantiate() -> CalendarViewController {
-        let viewController = CalendarViewController(nibName: "CalendarViewController", bundle: nil)
-        viewController.modalPresentationStyle = .overCurrentContext
-        return viewController
-    }
-    
     public init(dateSelectedBlock: @escaping (Date?) -> Void) {
-        super.init(nibName: "CalendarViewController", bundle: nil)
+        super.init(nibName: "CalendarViewController", bundle: Bundle(path: Bundle.main.path(forResource: "CalendarFoundation", ofType: "bundle")!))
         modalPresentationStyle = .overCurrentContext
         dateSelected = dateSelectedBlock
     }
