@@ -17,9 +17,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios
 
-  s.source = { :git => "https://github.com/RobertDresler/CalendarFoundation.git" }
-
-  s.source_files  = "Classes", "Classes/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source = { :git => "https://github.com/RobertDresler/CalendarFoundation.git", :tag => s.version }
+  s.source_files = "CalendarFoundation/*.{m,h}"
 
 end
