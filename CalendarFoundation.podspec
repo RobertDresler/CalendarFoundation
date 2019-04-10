@@ -4,8 +4,8 @@ Pod::Spec.new do |s|
   s.version      = "0.0.2"
   s.summary      = "Simple calendar"
  s.platform     = :ios
-s.ios.deployment_target  = '9.0'
-s.swift_version = '5.0'
+s.ios.deployment_target  = '11.0'
+s.swift_version = '4.2'
   s.description  = <<-DESC
   Simple calendar for Swift projects
                       DESC
