@@ -13,4 +13,4 @@ Simple Date selector for iOS apps
 
 ### Preview
 
-<img width="508" alt="Screen Shot 2019-04-10 at 13 17 37" src="https://user-images.githubusercontent.com/40290767/55874596-20325380-5b93-11e9-8f7b-0a763fd73fc9.png">
+<img width="508" alt="Screen Shot 2019-04-10 at 13 19 40" src="https://user-images.githubusercontent.com/40290767/55874699-6d162a00-5b93-11e9-8ea9-3a5992c10f47.png">
