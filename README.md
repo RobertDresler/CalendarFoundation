@@ -1,7 +1,5 @@
 # CalendarFoundation
-Simple Date selector for iOS apps
-
-- Let user select certain day or not
+Simple date selector for iOS apps based on Swift. Let user select certain day from calendar (or not).
 
 ---
 ### Install
@@ -26,6 +24,12 @@ let calendarVC = CalendarViewController(dateSelectedBlock: { [weak self] date in
 // From you `UIViewController` present it
 present(calendarVC, animated: true)
 ```
+---
+### UX
+- Swipe for changing month
+- Tap on day to select `Date`
+- Tap to Remove date to return `nil`
+- Tap anywhere to dismiss calendar
 ---
 
 ### Preview
