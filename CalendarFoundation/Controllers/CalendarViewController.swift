@@ -11,7 +11,7 @@ import UIKit
 public class CalendarViewController: UIViewController {
     
     public init(dateSelectedBlock: @escaping (Date?) -> Void) {
-        super.init(nibName: "CalendarViewController", bundle: Bundle(path: Bundle.main.path(forResource: "CalendarFoundation", ofType: "bundle")!))
+        super.init(nibName: "CalendarViewController", bundle: Bundle(for: type(of: self)))
         modalPresentationStyle = .overCurrentContext
         dateSelected = dateSelectedBlock
     }
