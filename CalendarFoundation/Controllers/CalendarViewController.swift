@@ -11,7 +11,7 @@ import UIKit
 public class CalendarViewController: UIViewController {
     
     class func instantiate() -> CalendarViewController {
-        let viewController = CalendarViewController(nibName: "CalendarViewController", bundle: Bundle(identifier:  "com.robertdresler.CalendarFoundation"))
+        let viewController = CalendarViewController(nibName: "CalendarViewController", bundle: nil)
         viewController.modalPresentationStyle = .overCurrentContext
         return viewController
     }
@@ -28,7 +28,7 @@ public class CalendarViewController: UIViewController {
 
     @IBOutlet weak var currentMonthLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
-    
+    Bundle
     // MARK: - Override
     
     override private init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
