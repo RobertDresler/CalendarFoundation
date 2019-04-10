@@ -77,9 +77,8 @@ Pod::Spec.new do |s|
   #  Specify the location from where the source should be retrieved.
   #  Supports git, hg, bzr, svn and HTTP.
   #
-  s.source = { :path => '.' }
-  s.source_files  = "Desktop/CalendarFoundation/**/*.swift"
-#s.source       = { :git => "https://github.com/RobertDresler/CalendarFoundation.git", :tag => "#{s.version}" }
+  s.source         = { :git => 'https://github.com/RobertDresler/CalendarFoundation', :tag => s.version }
+  }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

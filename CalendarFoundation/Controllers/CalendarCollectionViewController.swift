@@ -1,9 +1,9 @@
 //
 //  CalendarCollectionViewController.swift
-//  Todo
+//  CalendarFoundation
 //
-//  Created by Robert Dresler on 16/11/2018.
-//  Copyright © 2018 Robert Dresler. All rights reserved.
+//  Created by Robert Dresler on 10/04/2019.
+//  Copyright © 2019 Robert Dresler. All rights reserved.
 //
 
 import UIKit
@@ -11,8 +11,10 @@ import UIKit
 private let reuseIdentifier = "CalendarDayCell"
 
 public class CalendarCollectionViewController: UICollectionViewController {
-
-    var myPageViewController: CalendarPageViewController?
+    
+    var dateSelected: (Date) -> Void = { _ in}
+    var monthIndexChanged: (Int) -> Void = { _ in }
+    var yearIndexChanged: (Int) -> Void = { _ in }
     
     var numberOfDaysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
     
@@ -47,23 +49,21 @@ public class CalendarCollectionViewController: UICollectionViewController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .clear
-        myPageViewController = self.parent as? CalendarPageViewController
         let podBundle = Bundle(for: self.classForCoder)
         self.collectionView!.register(UINib(nibName: "CalendarCollectionViewCell", bundle: podBundle), forCellWithReuseIdentifier: reuseIdentifier)
     }
     
     override public func viewDidAppear(_ animated: Bool) {
-        myPageViewController?.selectedMonthIndex = selectedMonthIndex
-        myPageViewController?.selectedYear = selectedYear
+        monthIndexChanged(selectedMonthIndex)
+        yearIndexChanged(selectedYear)
     }
-
+    
     // MARK: - UICollectionViewDataSource
-
     override public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         let isFebruaryInLeapYear = selectedMonthIndex == 1 && selectedYear % 4 == 0
         return numberOfDaysInMonth[selectedMonthIndex] + firstWeekDayOfMonth + (isFebruaryInLeapYear ? 1 : 0)
     }
-
+    
     override public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CalendarCollectionViewCell
@@ -75,7 +75,7 @@ public class CalendarCollectionViewController: UICollectionViewController {
             
             let dayInMonth = indexPath.row - firstWeekDayOfMonth + 1
             cell.setCell(dayInMonth)
-
+            
             let isToday = Date.currentDay > dayInMonth && Date.currentMonth == selectedMonthIndex && Date.currentYear == selectedYear
             let isWeekend = indexPath.row % 7 == 5 || indexPath.row % 7 == 6
             
@@ -92,14 +92,14 @@ public class CalendarCollectionViewController: UICollectionViewController {
         
         return cell
     }
-
+    
     override public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         let cell = collectionView.cellForItem(at: indexPath) as! CalendarCollectionViewCell
         let selectedDate = DateComponents(calendar: Calendar.current, year: selectedYear, month: selectedMonthIndex + 1, day: cell.dateIndex).date!.startOfDay()
-        myPageViewController!.calendarDelegate?.dateSelected(selectedDate)
+        dateSelected(selectedDate)
         view.backgroundColor = UIColor.clear
         dismiss(animated: true, completion: nil)
     }
-
+    
 }
