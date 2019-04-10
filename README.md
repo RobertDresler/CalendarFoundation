@@ -23,8 +23,8 @@ let calendarVC = CalendarViewController(dateSelectedBlock: { [weak self] date in
     }
 })
     
-    // From you `UIViewController` present it
-    present(calendarVC, animated: true)
+// From you `UIViewController` present it
+present(calendarVC, animated: true)
 ```
 ---
 
