@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0AB3375225DEE45004040DE /* CalendarPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AB3372225DEE45004040DE /* CalendarPageViewController.swift */; };
-		D0AB3376225DEE45004040DE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AB3373225DEE45004040DE /* CalendarViewController.swift */; };
 		D0AB3379225DEF45004040DE /* CalendarCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AB3378225DEF45004040DE /* CalendarCollectionViewController.swift */; };
+		D0AB3380225DF181004040DE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AB337E225DF181004040DE /* CalendarViewController.swift */; };
+		D0AB3381225DF181004040DE /* CalendarPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AB337F225DF181004040DE /* CalendarPageViewController.swift */; };
 		D0D6E68521E53EC500C3CDDE /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D6E68421E53EC500C3CDDE /* CalendarViewController.xib */; };
 		D0F6DFFC21E524EE006938F7 /* CalendarFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = D0F6DFFA21E524EE006938F7 /* CalendarFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D0F6E02B21E53086006938F7 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6E02721E53085006938F7 /* CalendarCollectionViewCell.swift */; };
@@ -19,9 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D0AB3372225DEE45004040DE /* CalendarPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarPageViewController.swift; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/Controllers/CalendarPageViewController.swift"; sourceTree = "<group>"; };
-		D0AB3373225DEE45004040DE /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/Controllers/CalendarViewController.swift"; sourceTree = "<group>"; };
 		D0AB3378225DEF45004040DE /* CalendarCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewController.swift; sourceTree = "<group>"; };
+		D0AB337E225DF181004040DE /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		D0AB337F225DF181004040DE /* CalendarPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarPageViewController.swift; sourceTree = "<group>"; };
 		D0D6E68421E53EC500C3CDDE /* CalendarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
 		D0F6DFF721E524EE006938F7 /* CalendarFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CalendarFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F6DFFA21E524EE006938F7 /* CalendarFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarFoundation.h; sourceTree = "<group>"; };
@@ -73,8 +73,8 @@
 		D0B1A75E21E559BC008B4EA8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D0AB3372225DEE45004040DE /* CalendarPageViewController.swift */,
-				D0AB3373225DEE45004040DE /* CalendarViewController.swift */,
+				D0AB337F225DF181004040DE /* CalendarPageViewController.swift */,
+				D0AB337E225DF181004040DE /* CalendarViewController.swift */,
 				D0AB3378225DEF45004040DE /* CalendarCollectionViewController.swift */,
 			);
 			path = Controllers;
@@ -189,12 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0AB3376225DEE45004040DE /* CalendarViewController.swift in Sources */,
 				D0F6E03121E5312C006938F7 /* DateExtensions.swift in Sources */,
+				D0AB3381225DF181004040DE /* CalendarPageViewController.swift in Sources */,
 				D0F6E02B21E53086006938F7 /* CalendarCollectionViewCell.swift in Sources */,
 				D0F6E02F21E530F6006938F7 /* CurrentDateProvider.swift in Sources */,
 				D0AB3379225DEF45004040DE /* CalendarCollectionViewController.swift in Sources */,
-				D0AB3375225DEE45004040DE /* CalendarPageViewController.swift in Sources */,
+				D0AB3380225DF181004040DE /* CalendarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
