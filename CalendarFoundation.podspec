@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CalendarFoundation"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Simple calendar"
  s.ios.deployment_target = '12.0'
 s.requires_arc = true
@@ -20,5 +20,4 @@ s.requires_arc = true
   s.source = { :git => "https://github.com/RobertDresler/CalendarFoundation.git", :tag => s.version }
   s.source_files = "CalendarFoundation/**/*.{swift}"
 s.resources = "CalendarFoundation/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
-s.swift_version = "5.0"
 end
