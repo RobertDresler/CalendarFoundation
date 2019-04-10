@@ -22,7 +22,6 @@ public class CalendarViewController: UIViewController {
 
     @IBOutlet weak var currentMonthLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
-    Bundle
     // MARK: - Override
     
     override private init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
