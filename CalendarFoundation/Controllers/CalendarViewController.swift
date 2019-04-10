@@ -10,7 +10,7 @@ import UIKit
 
 public class CalendarViewController: UIViewController {
     
-    public class func instantiate() -> CalendarViewController {
+    class func instantiate() -> CalendarViewController {
         let viewController = CalendarViewController(nibName: "CalendarViewController", bundle: Bundle(identifier:  "com.robertdresler.CalendarFoundation"))
         viewController.modalPresentationStyle = .overCurrentContext
         return viewController
