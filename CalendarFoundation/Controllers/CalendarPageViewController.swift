@@ -38,7 +38,7 @@ class CalendarPageViewController: UIPageViewController, UIPageViewControllerData
         selectedMonthIndex = Date.currentMonth
         selectedYear = Date.currentYear
         monthChanged(selectedMonthIndex, selectedYear)
-        setViewControllers([collectionViewController], direction: .forward, animated: true, completion: nil)
+        setViewControllers([collectionViewController], direction: .forward, animated: true)
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {

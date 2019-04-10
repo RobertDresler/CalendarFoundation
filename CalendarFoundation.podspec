@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CalendarFoundation"
-  s.version      = "0.0.2"
+  s.version      = "0.0.4"
   s.summary      = "Simple calendar"
  s.platform     = :ios
 s.ios.deployment_target  = '11.0'

@@ -16,18 +16,10 @@ public class CalendarViewController: UIViewController {
         dateSelected = dateSelectedBlock
     }
     
-    public var dateSelected: (Date?) -> Void = { _ in }
+    var dateSelected: (Date?) -> Void = { _ in }
     
-    // MARK: - IBOutlets
-
     @IBOutlet weak var currentMonthLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
-    // MARK: - Override
-    
-    override private init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        modalPresentationStyle = .overCurrentContext
-    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -38,7 +30,7 @@ public class CalendarViewController: UIViewController {
         let calendarVC = CalendarPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         calendarVC.dateSelected = { [weak self] date in
             self?.dateSelected(date)
-            self?.dismiss(animated: true, completion: nil)
+            self?.dismiss(animated: true)
         }
         calendarVC.monthChanged = { [weak self] month, year in
             self?.currentMonthLabel.text = "\(Calendar.current.shortMonthSymbols[month]) \(year)"
@@ -65,11 +57,11 @@ public class CalendarViewController: UIViewController {
 
     @IBAction func deleteFinishDateButtonPressed(_ sender: Any) {
         dateSelected(nil)
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
     }
     
     @IBAction func cancelAction(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true)
     }
     
 }
