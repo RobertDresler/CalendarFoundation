@@ -20,5 +20,4 @@ s.requires_arc = true
   s.source = { :git => "https://github.com/RobertDresler/CalendarFoundation.git", :tag => s.version }
   s.source_files = "CalendarFoundation/**/*.{swift}"
 s.resources = "CalendarFoundation/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
-s.swift_version = "5.0"
 end
