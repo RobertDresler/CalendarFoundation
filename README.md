@@ -1,14 +1,35 @@
 # CalendarFoundation
-Simple Date selector for iOS apps
-
-- Let user select certain day or not
+Simple date selector for iOS apps based on Swift. Let user select certain day from calendar (or not).
 
 ---
 ### Install
 **CocoaPods**
-
-    pod 'CalendarFoundation'
-
+```ruby
+pod 'CalendarFoundation'
+```
+---
+### Usage
+```swift
+import CalendarFoundation
+    
+// Initialize new instance of controller with `dateSelectedBlock`
+let calendarVC = CalendarViewController(dateSelectedBlock: { [weak self] date in
+    if let date = date {
+        // work with received `Date`
+    } else {
+        // user selected option "Remove date" = `date` is `nil`
+    }
+})
+    
+// From you `UIViewController` present it
+present(calendarVC, animated: true)
+```
+---
+### UX
+- Swipe for changing month
+- Tap on day to select `Date`
+- Tap to Remove date to return `nil`
+- Tap anywhere to dismiss calendar
 ---
 
 ### Preview
