@@ -94,7 +94,6 @@ public class CalendarCollectionViewController: UICollectionViewController {
     }
     
     override public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         let cell = collectionView.cellForItem(at: indexPath) as! CalendarCollectionViewCell
         let selectedDate = DateComponents(calendar: Calendar.current, year: selectedYear, month: selectedMonthIndex + 1, day: cell.dateIndex).date!.startOfDay()
         dateSelected(selectedDate)
